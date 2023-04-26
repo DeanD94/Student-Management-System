@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-# Backend for a student management system built using Java SpringBoot, MySQL for database operations, and a Tomcat server.
-=======
-The frontend part of the student management system built using ReactJS and MaterialUI components. 
->>>>>>> origin/master
+
+# This repository contains a full stack Student Management System.
+
+# The backend for the project is built using Java SpringBoot and MySQL for database operations.
+
+#The frontend part of the project is built using ReactJS with MaterialUI components. 
+
