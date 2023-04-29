@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Box, Button, Container, Paper, TextField } from '@mui/material';
 
 export default function Student() {
@@ -19,16 +19,19 @@ export default function Student() {
         }).then(() => {
             console.log("Student has been added")
         })
+
     }
 
-    useEffect(() => {
+    const showStudents = () => {
         fetch("http://localhost:8080/student/getAll")
             .then(response => response.json())
             .then((result) => {
                 setStudents(result);
             })
+    }
 
-    }, [])
+
+
 
 
 
@@ -54,6 +57,7 @@ export default function Student() {
                         onChange={(input) => setAddress(input.target.value)}
                     />
                     <Button variant="contained" onClick={addStudent}>Add</Button>
+                    <Button variant="contained" onClick={showStudents}>Display</Button>
                 </Box>
             </Paper >
 
